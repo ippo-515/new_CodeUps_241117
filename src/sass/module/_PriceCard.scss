@@ -1,0 +1,57 @@
+@use "global" as *;
+
+.PriceCard {
+}
+
+.PriceCard__title {
+  font-size: rem(16);
+  line-height: calc(24 / 16);
+  letter-spacing: rem(0);
+  font-weight: $bold;
+  color: $dark-blue;
+  border-bottom: 1px solid $green;
+  padding: 0 0 rem(4);
+  margin-bottom: rem(8);
+}
+
+.PriceCard__TextWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: rem(8);
+  @include mq("md") {
+    gap: rem(8);  
+  }
+}
+
+.PriceCard__TextContents {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.PriceCard__Text {
+  font-size: rem(14);
+  line-height: calc(24 / 14);
+  letter-spacing: rem(0);
+  font-weight: $regular;
+  color: $dark-blue;
+  @include mq("md") {
+    font-size: rem(16);
+    line-height: calc(24 / 16);
+    letter-spacing: rem(0);
+  }
+}
+
+.PriceCard__Money {
+  font-size: rem(14);
+  line-height: calc(24 / 14);
+  letter-spacing: rem(0);
+  font-weight: $regular;
+  color: $dark-blue;
+  @include mq("md") {
+    font-size: rem(16);
+    line-height: calc(24 / 16);
+    letter-spacing: rem(0);
+  }
+}

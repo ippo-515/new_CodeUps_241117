@@ -1,0 +1,38 @@
+@use "global" as *;
+
+.Sp-nav {
+  position: fixed;
+  top: 0;
+  // left: 0;
+  right: -100%;
+  color: #fff;
+  background-color: $green;
+  text-align: center;
+  width: 100%;
+  opacity: 0;
+  transition: all 0.6s ease;
+  display: flex;
+  align-items: center;
+  z-index: 9998;
+  transition: all 0.5s ease-in-out;
+  padding: rem(24) 0 0;
+  margin-top: 80px;
+}
+@include mq("md") {
+  .Sp-nav {
+    display: none;
+  }
+}
+.Sp-nav__Content {
+  height: 100vh;
+  // margin: 0 auto;
+  // padding: 2rem 0 2rem;
+  width: 100%;
+  padding-bottom: rem(150);
+  overflow: scroll;
+}
+
+.Sp-nav.active {
+  opacity: 1;
+  right: 0%;
+}
