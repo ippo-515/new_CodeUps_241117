@@ -3,13 +3,16 @@
 .BlogCard {
   display: block;
   background-color: $white;
-  padding: rem(16) rem(16) rem(24);
+  padding: rem(15) rem(16) rem(24);
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  @include mq("md") {
+    padding: rem(15) rem(16) rem(24);
+  }
 }
 
 .BlogCard__Img {
   position: relative;
-  margin-bottom: rem(24);
+  margin-bottom: rem(18);
 }
 
 .BlogCard__Img::before {
@@ -48,7 +51,7 @@
   color: $dark-blue;
   border-bottom: 1px solid $green;
   padding: 0 0 rem(4);
-  margin-bottom: rem(16);
+  margin-bottom: rem(15);
 }
 
 .BlogCard__Text {

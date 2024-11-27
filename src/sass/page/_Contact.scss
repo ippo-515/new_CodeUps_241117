@@ -2,17 +2,22 @@
 
 .Contact {
   position: relative;
-  padding: rem(80) 0 rem(100);
+  padding: rem(81) 0 rem(104);
+  @include mq("md") {
+    padding: rem(140) 0 rem(161);
+  }
 }
 
 .Contact__BacktoTop {
   position: absolute;
-  bottom: rem(16);
-  right: rem(15);
-  width: rem(48); /* 擬似要素の幅 */
+  bottom: rem(11);
+  right: rem(13);
+  width: rem(52); /* 擬似要素の幅 */
   // height: rem(48); /* 擬似要素の高さ */
   @include mq("md") {
-    width: rem(80);
+    bottom: rem(12);
+    right: rem(16);
+    width: rem(88);
     // height: rem(80);
   }
 }
@@ -20,8 +25,8 @@
 /* 固定時のスタイル */
 .Contact__BacktoTop.fixed {
   position: fixed;
-  bottom: rem(16);
-  right: rem(15);
+  // bottom: rem(16);
+  // right: rem(15);
   z-index: 9999;
 }
 
@@ -51,7 +56,7 @@
   @include mq("md") {
     flex-direction: row;
     box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
-    padding: rem(80) rem(50);
+    padding: rem(81) rem(72) rem(80) rem(50);
   }
 }
 
@@ -59,10 +64,10 @@
   content: "";
   display: block;
   position: absolute;
-  top: rem(48);
+  top: rem(55);
   right: rem(15);
   width: rem(109); /* 擬似要素の幅 */
-  height: rem(50); /* 擬似要素の高さ */
+  height: rem(52); /* 擬似要素の高さ */
   background-image: url("../images/common/pc-fish1.png");
   background-size: contain; /* 画像全体を要素内に収める */
   background-repeat: no-repeat; /* 画像の繰り返しを防ぐ */
@@ -75,10 +80,10 @@
     height: rem(138);
   }
   @media (min-width: 1300px) {
-    top: rem(48);
-    right: rem(100);
-    width: rem(301);
-    height: rem(138);
+    top: rem(101);
+    right: rem(47);
+    width: rem(307);
+    height: rem(145);
   }
 }
 
@@ -96,37 +101,54 @@
 
 .Contact__Left {
   @include mq("md") {
-    padding: 0 rem(82) 0 0;
+    padding: 0 rem(81) 0 0;
     border-right: 1px solid $green;
   }
 }
 
 .Contact__LeftImgWrapper {
-  border-bottom: 1px solid #408f95;
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 0 0 rem(6);
-  margin-bottom: rem(16);
+  padding: 0 0 rem(0);
+  margin-bottom: rem(12);
   box-shadow: 0 6px 5px -5px rgba(0, 0, 0, 0.25);
   @include mq("md") {
-    padding: 0 0 rem(8);
-    margin-bottom: rem(24);
+    // border-bottom: 1px solid #408f95;
+    padding: 0 0 rem(0);
+    margin-bottom: rem(22);
+  }
+}
+
+.Contact__LeftImgWrapper::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: rem(1);
+  background-color: $green;
+  bottom: rem(3);
+  left: 0;
+  @include mq("md") {
+    bottom: rem(0);
   }
 }
 
 .Contact__LeftImg {
   position: relative;
-  width: 58.988305%;
+  width: 62.5%;
   @include mq("md") {
-    width: rem(200);
+    width: rem(208);
   }
 }
 
 .Contact__LeftImg::before {
   content: "";
   display: block;
-  padding-top: 39.356322%; //このおかげで画像サイズ1:1を保てる！
+  padding-top: 40%; //このおかげで画像サイズ1:1を保てる！
+  @include mq("md") {
+    padding-top: 39.9%; //このおかげで画像サイズ1:1を保てる！
+  }
 }
 
 .Contact__LeftImg img {
@@ -143,7 +165,7 @@
   @include mq("md") {
     display: flex;
     flex-direction: row;
-    gap: rem(21);
+    gap: rem(23);
   }
 }
 
@@ -162,6 +184,7 @@
   margin-bottom: rem(16);
   @include mq("md") {
     align-items: flex-start;
+    font-weight: $normal;
   }
 }
 
@@ -219,8 +242,11 @@
   font-family: $second-font-family;
   font-weight: $regular;
   color: $dark-blue;
-  margin-bottom: rem(0);
+  margin-bottom: rem(-5);
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  @include mq("md") {
+    margin-bottom: rem(-5);
+  }
 }
 
 .Contact__uppercase {
@@ -234,8 +260,11 @@
   letter-spacing: rem(0);
   font-weight: $regular;
   color: $green;
-  margin-bottom: rem(8);
+  margin-bottom: rem(10);
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  @include mq("md") {
+    margin-bottom: rem(10);
+  }
 }
 
 .Contact__Description {
@@ -246,6 +275,9 @@
   color: $green;
   margin-bottom: rem(40);
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  @include mq("md") {
+    margin-bottom: rem(40);
+  }
 }
 
 .Contact__Button {

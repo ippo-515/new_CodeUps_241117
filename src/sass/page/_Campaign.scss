@@ -21,6 +21,9 @@
 
 .Campaign__Title {
   margin-bottom: rem(28);
+  @include mq("md") {
+    margin-bottom: rem(40);
+  }
 }
 
 .Campaign__swiper-button {
@@ -32,7 +35,7 @@
     position: absolute;
     width: rem(240);
     height: rem(80);
-    top: 0;
+    top: rem(1);
     right: $padding-pc;
   }
 }
@@ -75,7 +78,10 @@
 }
 
 .Campaign__Contents {
-  margin-bottom: rem(40);
+  margin-bottom: rem(30);
+  @include mq("md") {
+    margin-bottom: rem(70);
+  }
 }
 
 .Campaign__Contents.swiper {
@@ -102,4 +108,7 @@
   flex-direction: row;
   justify-content: center;
   margin-bottom: rem(10);
+  @include mq("md") {
+    margin-bottom: rem(0);
+  }
 }

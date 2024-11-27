@@ -1,7 +1,7 @@
 @use "global" as *;
 
 .VoiceCard {
-  padding: rem(16) rem(16) rem(24);
+  padding: rem(15) rem(16) rem(24);
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.25);
   @include mq("md") {
     padding: rem(24);
@@ -34,7 +34,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-end;
-    margin-bottom: rem(8);
+    margin-bottom: rem(11);
   }
 }
 
@@ -56,17 +56,18 @@
   letter-spacing: rem(0);
   font-weight: $regular;
   color: $dark-blue;
-  padding: rem(4) rem(12);
+  padding: rem(3) rem(11);
   border: 1px solid $green;
   margin-bottom: rem(4);
   @include mq("md") {
     margin-bottom: rem(0);
+    padding: rem(5) rem(15);
   }
 }
 
 .VoiceCard__Title {
   font-size: rem(16);
-  line-height: calc(24 / 16);
+  line-height: calc(23 / 16);
   letter-spacing: rem(0);
   font-weight: $medium;
   color: $dark-blue;
@@ -74,8 +75,9 @@
   padding: 0 0 rem(4);
   @include mq("md") {
     font-size: rem(24);
-    line-height: calc(30 / 24);
+    line-height: calc(32.4 / 24);
     letter-spacing: rem(0);
+    padding: 0 0 rem(5);
   }
 }
 

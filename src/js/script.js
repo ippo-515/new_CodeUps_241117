@@ -96,20 +96,20 @@ jQuery(function ($) {
       prevEl: ".swiper-button-prev",
     },
     // 自動再生
-    autoplay: {
-      delay: 1000, // 1秒後に次のスライド（初期値：3000）
-      disableOnInteraction: false, // 矢印をクリックしても自動再生を止めない
-    },
+    // autoplay: {
+    //   delay: 1000, // 1秒後に次のスライド（初期値：3000）
+    //   disableOnInteraction: false, // 矢印をクリックしても自動再生を止めない
+    // },
     // レスポンシブ対応設定
     breakpoints: {
       // 768px未満の場合（デフォルトの設定）
       0: {
-        slidesPerView: 1.2, // 一度に表示する枚数
-        spaceBetween: 16, // スライド間の距離
+        slidesPerView: 1.21, // 一度に表示する枚数
+        spaceBetween: 24, // スライド間の距離
       },
       // 768px以上の場合
       768: {
-        slidesPerView: 3.5, // 一度に表示する枚数
+        slidesPerView: 3.48, // 一度に表示する枚数
         spaceBetween: 40, // スライド間の距離
         // centeredSlides: true, // 中央揃え
         initialSlide: 1, // 初期スライドを1枚目に設定

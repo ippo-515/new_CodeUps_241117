@@ -8,6 +8,9 @@
 
 .AboutUs__Title {
   margin-bottom: rem(28);
+  @include mq("md") {
+    margin-bottom: rem(40);
+  }
 }
 
 .AboutUs__Contents {
@@ -50,7 +53,7 @@
   width: 81.449275362%;
   // position: relative;
   position: absolute;
-  top: 10.7438%;
+  top: 12%;
   right: 0%;
   z-index: 1;
 }
@@ -74,8 +77,8 @@
 .AboutUs__ContentWrapper {
   @include mq("md") {
     position: absolute;
-    top: 50%;
-    left: 45.6%;
+    top: 48.7%;
+    left: 46.4%;
     transform: translate(-50%, -50%);
     display: flex;
     flex-direction: row;
@@ -102,7 +105,7 @@
     font-weight: $regular;
     color: $white;
     flex-shrink: 0;
-    margin-top: rem(10);
+    margin-top: rem(0);
     margin-bottom: rem(0);
   }
 }
@@ -126,6 +129,7 @@
   margin-bottom: rem(50);
   @include mq("md") {
     color: $white;
+    margin-bottom: rem(40);
   }
 }
 
@@ -155,7 +159,7 @@
     right: rem(-55);
   }
   @media (min-width: 1300px) {
-    bottom: rem(-90);
+    bottom: rem(-98);
     right: rem(-97);
   }
 }

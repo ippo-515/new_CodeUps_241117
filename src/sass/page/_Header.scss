@@ -17,6 +17,10 @@
   justify-content: space-between;
   padding: $padding-sp;
   background-color: rgb(13, 41, 54, 0.68);
+  @include mq("md") {
+    height: rem(90);
+    padding: rem(40);
+  }
 }
 
 .Header__inner.active {
@@ -46,6 +50,10 @@
   height: rem(38);
   position: relative;
   transition: all 1s ease;
+  @include mq("md") {
+    width: rem(133);
+    height: rem(50);
+  }
 }
 
 .Header__LogoImg::before {

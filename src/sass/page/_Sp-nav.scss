@@ -32,6 +32,10 @@
   overflow: scroll;
 }
 
+.Sp-nav__List {
+  column-gap: rem(7);
+}
+
 .Sp-nav.active {
   opacity: 1;
   right: 0%;

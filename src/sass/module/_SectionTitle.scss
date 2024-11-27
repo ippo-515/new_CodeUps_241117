@@ -15,7 +15,7 @@
   font-weight: $regular;
   color: $dark-blue;
   margin-bottom: rem(4);
-  text-transform: capitalize;
+  // text-transform: capitalize;
   @include mq("md") {
     font-size: rem(40);
     line-height: calc(40 / 40);

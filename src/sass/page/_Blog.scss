@@ -103,7 +103,7 @@
     width: rem(301);
   }
   @media (min-width: 1200px) {
-    bottom: rem(-180);
+    bottom: rem(-162);
     left: rem(100);
     width: rem(301);
   }
@@ -134,6 +134,10 @@
 
 .Blog__inner {
 }
+.Blog__inner.inner {
+  padding-left: rem(21);
+  padding-right: rem(21);
+}
 
 .Blog__Title {
   margin-bottom: rem(28);
@@ -147,7 +151,7 @@
   margin-bottom: rem(40);
   z-index: 10;
   @include mq("md") {
-    margin-bottom: rem(80);
+    margin-bottom: rem(78);
   }
 }
 

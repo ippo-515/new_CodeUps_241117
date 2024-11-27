@@ -1,8 +1,8 @@
 @use "global" as *;
 
 .l-AboutUs {
-  margin-bottom: rem(70);
+  margin-bottom: rem(74);
   @include mq("md") {
-    margin-bottom: rem(164);
+    margin-bottom: rem(171);
   }
 }
