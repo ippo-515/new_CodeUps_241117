@@ -1,0 +1,96 @@
+@use "global" as *;
+
+.Nav-List {
+  display: flex;
+  flex-direction: column;
+  gap: rem(24);
+  // margin-bottom: rem(40);
+}
+
+.Nav-List__Item {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: rem(4);
+}
+
+.Nav-List__ItemImg {
+  position: relative;
+  width: rem(18);
+  height: rem(18);
+}
+
+.Nav-List__ItemImg--hidden {
+  visibility: hidden;
+}
+
+.Nav-List__ItemImg::before {
+  content: "";
+  display: block;
+  padding-top: 37.5%; //このおかげで画像サイズ1:1を保てる！
+}
+
+.Nav-List__ItemImg img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.Nav-List__ItemTitle {
+  position: relative;
+  font-size: rem(16);
+  line-height: calc(18 / 16);
+  letter-spacing: rem(0);
+  font-family: $base-font-family;
+  font-weight: $bold;
+  color: $white;
+  text-align: left;
+  flex-shrink: 0;
+  transition: all 0.5s ease;
+}
+
+// .Nav-List__ItemTitle:hover {
+//   opacity: 0.3;
+// }
+
+.Nav-List__ItemText {
+  position: relative;
+  font-size: rem(16);
+  line-height: calc(18 / 16);
+  letter-spacing: rem(0);
+  font-family: $base-font-family;
+  font-weight: $regular;
+  color: $white;
+  flex-shrink: 0;
+  transition: all 0.5s ease;
+  font-weight: $normal;
+}
+
+// .Nav-List__ItemText:hover {
+//   opacity: 0.3;
+// }
+
+/* 文字に下線を追加 */
+.Nav-List__ItemText::after,
+.Nav-List__ItemTitle::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -10px; /* 余白の設定 */
+  height: 1px; /* 下線の太さ */
+  background-color: $white; /* 下線の色 */
+  width: 0%; /* 初期状態では下線の幅を0%に */
+  transition: width 0.3s ease; /* 下線の表示速度を調整 */
+  opacity: 1;
+}
+
+/* ホバー時に下線を表示 */
+.Nav-List__ItemText:hover::after,
+.Nav-List__ItemTitle:hover::after {
+  width: 100%; /* ホバー時に幅を100%に */
+  opacity: 1;
+}

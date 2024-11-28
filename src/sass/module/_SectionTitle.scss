@@ -1,0 +1,63 @@
+@use "global" as *;
+
+.SectionTitle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.SectionTitle__English {
+  font-size: rem(32);
+  line-height: calc(40 / 32);
+  letter-spacing: rem(0);
+  font-family: $second-font-family;
+  font-weight: $regular;
+  color: $dark-blue;
+  margin-bottom: rem(4);
+  // text-transform: capitalize;
+  @include mq("md") {
+    font-size: rem(40);
+    line-height: calc(40 / 40);
+    letter-spacing: rem(0);
+    font-weight: $regular;
+    margin-bottom: rem(8);
+  }
+}
+
+.SectionTitle__English--white {
+  @include mq("md") {
+    color: $white;
+  }
+}
+
+.SectionTitle__uppercase {
+  text-transform: uppercase;
+  color: $green;
+}
+
+.SectionTitle__uppercase--white {
+  @include mq("md") {
+    color: $white;
+  }
+}
+
+.SectionTitle__Japanese {
+  font-size: rem(12);
+  line-height: calc(18 / 12);
+  letter-spacing: rem(0);
+  font-weight: $regular;
+  color: $green;
+  @include mq("md") {
+    font-size: rem(12);
+    line-height: calc(18 / 12);
+    letter-spacing: rem(0);
+    font-weight: $regular;
+  }
+}
+
+.SectionTitle__Japanese--white {
+  @include mq("md") {
+    color: $white;
+  }
+}

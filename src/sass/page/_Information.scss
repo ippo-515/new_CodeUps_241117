@@ -1,0 +1,99 @@
+@use "global" as *;
+
+.Information {
+  padding: rem(80) 0 rem(82);
+  background-color: $light-green;
+  @include mq("md") {
+    padding: rem(100) 0 rem(77);
+  }
+}
+
+.Information__inner {
+}
+
+.Information__Title {
+  margin-bottom: rem(27);
+  @include mq("md") {
+    margin-bottom: rem(40);
+  }
+}
+
+.Information__Contents {
+  @include mq("md") {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: rem(48);
+  }
+}
+
+.Information__Img {
+  position: relative;
+  margin-bottom: rem(26);
+  @include mq("md") {
+    flex-basis: rem(540);
+    flex-shrink: 0;
+    margin-bottom: rem(0);
+  }
+}
+
+.Information__Img::before {
+  content: "";
+  display: block;
+  padding-top: 65.7971%; //このおかげで画像サイズ1:1を保てる！
+}
+
+.Information__Img img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.Information__ContentWrapper {
+}
+
+.Information__ContentsTitle {
+  font-size: rem(20);
+  line-height: calc(24 / 20);
+  letter-spacing: rem(0);
+  font-weight: $bold;
+  color: $dark-blue;
+  border-bottom: 1px solid #408f95;
+  padding: 0 0 rem(3);
+  margin-bottom: rem(7);
+  @include mq("md") {
+    font-size: rem(24);
+    line-height: calc(24 / 24);
+    letter-spacing: rem(0);
+    padding: 0 0 rem(8);
+    margin-bottom: rem(8);
+  }
+}
+
+.Information__TextWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Information__Text {
+  font-size: rem(16);
+  line-height: calc(24 / 16);
+  letter-spacing: rem(0);
+  font-weight: $regular;
+  color: $dark-blue;
+  margin-bottom: rem(40);
+  @include mq("md") {
+    font-size: rem(16);
+    line-height: calc(24 / 16);
+    letter-spacing: rem(0);
+    margin-bottom: rem(37);
+  }
+}
+
+.Information__Button {
+}

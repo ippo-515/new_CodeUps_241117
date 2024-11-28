@@ -1,0 +1,73 @@
+@use "global" as *;
+
+.Voice {
+}
+
+.Voice__inner {
+  position: relative;
+}
+
+.Voice__pcSeahorse {
+  display: none;
+  @include mq("md") {
+    display: block;
+    position: absolute;
+    bottom: rem(-70);
+    right: calc(rem(0) + $padding-pc);
+    width: rem(71);
+    // z-index: -1;
+  }
+  // @media (min-width: 1000px) {
+  //   bottom: rem(-180);
+  //   left: rem(50);
+  //   width: rem(301);
+  // }
+  // @media (min-width: 1200px) {
+  //   bottom: rem(-180);
+  //   left: rem(100);
+  //   width: rem(301);
+  // }
+}
+
+.Voice__pcSeahorse::before {
+  display: none;
+  @include mq("md") {
+    content: "";
+    display: block;
+    padding-top: 228.169014084%; //このおかげで画像サイズ1:1を保てる！
+  }
+}
+
+.Voice__pcSeahorse img {
+  display: none;
+  @include mq("md") {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.Voice__Title {
+  margin-bottom: rem(44);
+  @include mq("md") {
+    margin-bottom: rem(30);
+  }
+}
+
+.Voice__Contents {
+  margin-bottom: rem(40);
+  @include mq("md") {
+    margin-bottom: rem(80);
+  }
+}
+
+.Voice__Button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}

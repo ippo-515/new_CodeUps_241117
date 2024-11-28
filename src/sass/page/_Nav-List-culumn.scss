@@ -1,0 +1,54 @@
+@use "global" as *;
+
+.Nav-List-culumn {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  column-gap: rem(16);
+  row-gap: rem(40);
+}
+
+.Nav-List-culumn--footer {
+  @include mq("md") {
+    flex-direction: row;
+    column-gap: rem(30);
+    row-gap: rem(0);
+  }
+}
+.Nav-List-culumn__Item--footer:nth-child(1) {
+  @include mq("md") {
+    order: 1;
+  }
+}
+.Nav-List-culumn__Item--footer:nth-child(2) {
+  @include mq("md") {
+    order: 3;
+  }
+}
+.Nav-List-culumn__Item--footer:nth-child(3) {
+  @include mq("md") {
+    order: 2;
+  }
+}
+.Nav-List-culumn__Item--footer:nth-child(4) {
+  @include mq("md") {
+    order: 4;
+  }
+}
+
+.Nav-List-culumn__Item {
+  margin: 0;
+  padding: 0;
+  width: calc(100% / 2 - rem(16) * 1 / 2);
+  display: flex;
+  flex-direction: column;
+  gap: rem(40);
+}
+
+.Nav-List-culumn__Item--footer {
+  @include mq("md") {
+    width: calc(100% / 4 - rem(30) * 3 / 4);
+  }
+}

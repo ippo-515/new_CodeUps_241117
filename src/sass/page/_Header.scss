@@ -1,0 +1,82 @@
+@use "global" as *;
+
+.Header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9997;
+  transition: background-color 0.5s ease;
+}
+
+.Header__inner {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: $padding-sp;
+  background-color: rgb(13, 41, 54, 0.68);
+  transition: background-color 0.5s ease; /* 0.5秒かけて色を変える */
+  @include mq("md") {
+    height: rem(90);
+    padding: rem(40);
+  }
+}
+
+.Header__inner.active {
+  background-color: $green;
+  // border: 1px solid #000;
+  transition: background-color 0.5s ease; /* 0.5秒かけて色を変える */
+}
+
+.Header__inner--scrolled {
+  background-color: #9a9a9a;
+  transition: background-color 0.5s ease; /* 0.5秒かけて色を変える */
+}
+
+.Header__Logo {
+  flex-shrink: 0;
+  height: inherit;
+  display: flex;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.Header__Logo:hover .Header__LogoImg {
+  scale: 1.1;
+}
+
+.Header__LogoImg {
+  width: rem(102);
+  height: rem(38);
+  position: relative;
+  transition: all 1s ease;
+  @include mq("md") {
+    width: rem(133);
+    height: rem(50);
+  }
+}
+
+.Header__LogoImg::before {
+  content: "";
+  display: block;
+  padding-top: 37.25490196%; //このおかげで画像サイズ1:1を保てる！
+}
+
+.Header__LogoImg img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.Header__Hamburger {
+}
+
+.Header__Pc-nav {
+  flex-shrink: 1;
+}

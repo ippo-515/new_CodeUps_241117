@@ -1,0 +1,19 @@
+@use "global" as *;
+
+.BlogColumn {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: rem(40);
+  @include mq("md") {
+    flex-direction: row;
+    flex-wrap: wrap;
+    // justify-content: space-between;
+  }
+}
+
+.BlogColumn__Item {
+  @include mq("md") {
+    width: calc(100% / 3 - rem(80) / 3);
+  }
+}

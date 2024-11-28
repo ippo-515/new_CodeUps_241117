@@ -1,0 +1,114 @@
+@use "global" as *;
+
+.Campaign {
+  @include mq("md") {
+    // overflow: hidden;
+  }
+}
+
+.Campaign__inner {
+  position: relative;
+  overflow: hidden;
+  @include mq("md") {
+    overflow: visible;
+  }
+}
+
+.Campaign__inner.inner {
+  @include mq("md") {
+  }
+}
+
+.Campaign__Title {
+  margin-bottom: rem(28);
+  @include mq("md") {
+    margin-bottom: rem(40);
+  }
+}
+
+.Campaign__swiper-button {
+  display: none;
+  @include mq("md") {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: absolute;
+    width: rem(240);
+    height: rem(80);
+    top: rem(1);
+    right: $padding-pc;
+  }
+}
+
+.Campaign__swiper-button-prev,
+.Campaign__swiper-button-next {
+  position: relative;
+  top: auto;
+  left: auto;
+  bottom: auto;
+  right: auto;
+  margin-top: auto;
+  height: 100%;
+  width: rem(80);
+  // top: rem(22);
+  // bottom: 0;
+  // transform: translate(-50%, -50%);
+}
+/* 前へ次への矢印カスタマイズ */
+.Campaign__swiper-button-prev::after,
+.Campaign__swiper-button-next::after {
+  content: "";
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 98%;
+  width: 98%;
+  // margin: auto;
+}
+/* 前への矢印カスタマイズ */
+.Campaign__swiper-button-prev::after {
+  background-image: url(../images/common/pc-leftArrow.png);
+}
+/* 次への矢印カスタマイズ */
+.Campaign__swiper-button-next::after {
+  background-image: url(../images/common/pc-rightArrow.png);
+}
+
+.Campaign__Contents {
+  margin-bottom: rem(30);
+  @include mq("md") {
+    margin-bottom: rem(70);
+  }
+}
+
+.Campaign__Contents.swiper {
+  overflow: visible;
+  @include mq("md") {
+    overflow: hidden;
+    margin-right: calc(50% - 50vw);
+  }
+}
+
+.Campaign__List {
+}
+
+.Campaign__Item {
+  // box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.25);
+}
+
+.Campaign__Card {
+  // width: 81.159420289%;
+}
+
+.Campaign__Button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-bottom: rem(10);
+  @include mq("md") {
+    margin-bottom: rem(0);
+  }
+}

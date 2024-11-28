@@ -1,0 +1,19 @@
+@use "global" as *;
+
+.VoiceColumn {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: rem(40);
+  @include mq("md") {
+    flex-direction: row;
+    flex-wrap: wrap;
+    // justify-content: space-between;
+  }
+}
+
+.VoiceColumn__Item {
+  @include mq("md") {
+    width: calc(100% / 2 - rem(40) / 2);
+  }
+}
