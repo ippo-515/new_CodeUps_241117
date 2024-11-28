@@ -17,6 +17,7 @@
   justify-content: space-between;
   padding: $padding-sp;
   background-color: rgb(13, 41, 54, 0.68);
+  transition: background-color 0.5s ease; /* 0.5秒かけて色を変える */
   @include mq("md") {
     height: rem(90);
     padding: rem(40);
@@ -26,10 +27,11 @@
 .Header__inner.active {
   background-color: $green;
   // border: 1px solid #000;
+  transition: background-color 0.5s ease; /* 0.5秒かけて色を変える */
 }
 
 .Header__inner--scrolled {
-  background-color: $green;
+  background-color: #9a9a9a;
   transition: background-color 0.5s ease; /* 0.5秒かけて色を変える */
 }
 

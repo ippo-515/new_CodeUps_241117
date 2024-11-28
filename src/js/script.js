@@ -9,8 +9,8 @@ jQuery(function ($) {
       window.scrollTo(0, 0); // スクロール位置をトップに設定
     }, 100); // 100ミリ秒の遅延を加えてスクロール
 
-    const intro = document.querySelector(".Loading");
-    const swiperContainer = document.querySelector(".mv");
+    const intro = document.querySelector(".js-Loading");
+    const swiperContainer = document.querySelector(".js-mv");
 
     if (!intro || !swiperContainer) {
       console.error("要素が見つかりません");
@@ -33,7 +33,7 @@ jQuery(function ($) {
         swiperContainer.style.display = "block";
 
         // Swiperの初期化をmvが表示された後に行う
-        const swiperMv = new Swiper(".swiper--mv", {
+        const swiperMv = new Swiper(".js-swiper--mv", {
           loop: true, // ループ
           speed: 2500, // ゆっくり
           autoplay: {
@@ -85,7 +85,7 @@ jQuery(function ($) {
   /* --------------------------------------------
    * 　Swiper_Campaign
    * -------------------------------------------- */
-  const swiperCampaign = new Swiper(".swiper--Campaign", {
+  const swiperCampaign = new Swiper(".js-swiper--Campaign", {
     // ループ
     loop: true,
     // ゆっくり
@@ -96,10 +96,10 @@ jQuery(function ($) {
       prevEl: ".swiper-button-prev",
     },
     // 自動再生
-    // autoplay: {
-    //   delay: 1000, // 1秒後に次のスライド（初期値：3000）
-    //   disableOnInteraction: false, // 矢印をクリックしても自動再生を止めない
-    // },
+    autoplay: {
+      delay: 1000, // 1秒後に次のスライド（初期値：3000）
+      disableOnInteraction: false, // 矢印をクリックしても自動再生を止めない
+    },
     // レスポンシブ対応設定
     breakpoints: {
       // 768px未満の場合（デフォルトの設定）
@@ -109,6 +109,13 @@ jQuery(function ($) {
       },
       // 768px以上の場合
       768: {
+        slidesPerView: 3.2, // 一度に表示する枚数
+        spaceBetween: 30, // スライド間の距離
+        // centeredSlides: true, // 中央揃え
+        initialSlide: 1, // 初期スライドを1枚目に設定
+      },
+      // 1200px以上の場合
+      1200: {
         slidesPerView: 3.48, // 一度に表示する枚数
         spaceBetween: 40, // スライド間の距離
         // centeredSlides: true, // 中央揃え
@@ -159,7 +166,7 @@ jQuery(function ($) {
    * 　ヘッダー下に移動したらヘッダーの色変える
    * -------------------------------------------- */
   $(document).ready(function () {
-    var headerHeight = $(".Header").outerHeight(); // ヘッダーの高さを取得
+    var headerHeight = $(".js-HeaderHeader").outerHeight(); // ヘッダーの高さを取得
     // var mainViewBottom = $("header").offset().top + $(".Campaign__inner").outerHeight();
     var mainViewBottom = $("header").offset().top + window.innerHeight;
     $(window).on("scroll", function () {
@@ -210,8 +217,8 @@ jQuery(function ($) {
    * 　一番上に移動する矢印
    * -------------------------------------------- */
   // 要素の取得
-  const backToTopButton = document.querySelector(".Contact__BacktoTop");
-  const specialScreen = document.querySelector(".Contact");
+  const backToTopButton = document.querySelector(".js-Contact__BacktoTop");
+  const specialScreen = document.querySelector(".js-Contact");
 
   // 初期位置の取得
   const initialPosition = backToTopButton.offsetTop;

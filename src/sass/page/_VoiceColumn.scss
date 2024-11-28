@@ -3,6 +3,7 @@
 .VoiceColumn {
   display: flex;
   flex-direction: column;
+  align-items: stretch;
   gap: rem(40);
   @include mq("md") {
     flex-direction: row;

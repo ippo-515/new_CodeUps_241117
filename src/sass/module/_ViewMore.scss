@@ -6,13 +6,14 @@
   background-color: $green;
   padding: rem(20) rem(40);
   transform: translateX(-2px);
+  border: 1px solid $green;
   @include mq("md") {
     padding: rem(16) rem(40);
   }
 }
 
 .ViewMore::before {
-  background: $dark-blue;
+  background: $white;
   position: absolute;
   top: 0;
   left: 0;
@@ -30,6 +31,18 @@
 .ViewMore:hover::before {
   transform: scale(1, 1);
 }
+
+.ViewMore:hover .ViewMore__Text {
+  color: $green;
+}
+
+.ViewMore:hover .ViewMore__Img img:nth-of-type(1) {
+  display: none;
+}
+.ViewMore:hover .ViewMore__Img img:nth-of-type(2) {
+  display: block;
+}
+
 
 .ViewMore::after {
   position: absolute;
@@ -81,6 +94,10 @@
   @include mq("md") {
     margin-top: rem(5);
   }
+}
+
+.ViewMore__Img img:nth-of-type(2) {
+  display: none;
 }
 
 .ViewMore__Img::before {

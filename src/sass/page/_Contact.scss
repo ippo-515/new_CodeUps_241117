@@ -2,13 +2,14 @@
 
 .Contact {
   position: relative;
-  padding: rem(81) 0 rem(104);
+  padding: rem(81) 0 rem(102);
   @include mq("md") {
     padding: rem(140) 0 rem(161);
   }
 }
 
 .Contact__BacktoTop {
+  cursor: pointer;
   position: absolute;
   bottom: rem(11);
   right: rem(13);
