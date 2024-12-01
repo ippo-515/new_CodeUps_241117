@@ -1,7 +1,7 @@
 @use "global" as *;
 
 .Price {
-  padding: rem(80) 0 rem(82);
+  padding: rem(80) 0 rem(84);
   background-color: $light-green;
   @include mq("md") {
     position: relative;
@@ -11,24 +11,33 @@
 
 .Price__pcFish {
   display: none;
+  // @include mq("md") {
+  //   display: block;
+  //   position: absolute;
+  //   bottom: rem(30);
+  //   left: rem(0);
+  //   width: rem(350);
+  //   // z-index: -1;
+  // }
   @include mq("md") {
     display: block;
     position: absolute;
-    bottom: rem(30);
-    left: rem(0);
-    width: rem(350);
+    bottom: 5%;
+    left: 7%;
+    width: 30.3%;
+    max-width: rem(437);
     // z-index: -1;
   }
-  @media (min-width: 1000px) {
-    bottom: rem(30);
-    left: rem(20);
-    width: rem(440);
-  }
-  @media (min-width: 1300px) {
-    bottom: rem(59);
-    left: rem(100);
-    width: rem(437);
-  }
+  // @media (min-width: 1000px) {
+  //   bottom: rem(30);
+  //   left: rem(20);
+  //   width: rem(440);
+  // }
+  // @media (min-width: 1300px) {
+  //   bottom: rem(59);
+  //   left: rem(100);
+  //   width: rem(437);
+  // }
 }
 
 .Price__pcFish::before {

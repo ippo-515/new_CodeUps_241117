@@ -4,11 +4,11 @@
   position: relative;
   display: inline-block;
   background-color: $green;
-  padding: rem(20) rem(40);
+  padding: rem(19) rem(40);
   transform: translateX(-2px);
   border: 1px solid $green;
   @include mq("md") {
-    padding: rem(16) rem(40);
+    padding: rem(15) rem(39.8);
   }
 }
 

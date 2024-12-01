@@ -1,14 +1,16 @@
 @use "global" as *;
 
 .Campaign {
+  overflow: hidden;
+  padding: 0 0 rem(10);
   @include mq("md") {
-    // overflow: hidden;
   }
 }
 
 .Campaign__inner {
   position: relative;
-  overflow: hidden;
+  // overflow: hidden;
+  overflow: visible;
   @include mq("md") {
     overflow: visible;
   }
@@ -85,7 +87,9 @@
 }
 
 .Campaign__Contents.swiper {
-  overflow: visible;
+  // overflow: visible;
+  overflow: hidden;
+  margin-right: calc(50% - 50vw);
   @include mq("md") {
     overflow: hidden;
     margin-right: calc(50% - 50vw);
@@ -93,13 +97,23 @@
 }
 
 .Campaign__List {
+  height: auto;
+  // align-items: stretch;
+  // flex-grow: 1;
 }
 
 .Campaign__Item {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  // flex-grow: 1;
   // box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.25);
 }
 
 .Campaign__Card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
   // width: 81.159420289%;
 }
 

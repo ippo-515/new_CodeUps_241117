@@ -1,7 +1,7 @@
 @use "global" as *;
 
 .Information {
-  padding: rem(80) 0 rem(82);
+  padding: rem(80) 0 rem(84);
   background-color: $light-green;
   @include mq("md") {
     padding: rem(100) 0 rem(77);

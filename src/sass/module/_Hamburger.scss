@@ -28,7 +28,8 @@
   top: 0px;
 }
 .Hamburger span:nth-of-type(2) {
-  top: rem(11.5);
+  // top: rem(11.5);
+  top: 50%;
 }
 .Hamburger span:nth-of-type(3) {
   bottom: rem(0);

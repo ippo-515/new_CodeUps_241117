@@ -50,12 +50,12 @@
       <div class="Header js-Header">
         <div class="Header__inner">
           <a href="#" class="Header__Logo">
-            <div class="Header__LogoImg">
+            <h1 class="Header__LogoImg">
               <img
                 src="./assets/images/common/sp-headerLogo.png"
                 alt="ロゴの画像"
               />
-            </div>
+            </h1>
           </a>
           <div class="Header__Hamburger">
             <div class="Hamburger js-Hamburger">
@@ -348,6 +348,13 @@
       </div>
       <section class="Loading js-Loading">
         <div class="Loading__Img Loading__Img--Left">
+          <!-- <picture>
+            <source
+              srcset="./assets/images/common/pc-MV1.jpg"
+              media="(min-width: 768px)"
+            />
+            <img src="./assets/images/common/sp-MV1.jpg" alt="亀の画像" />
+          </picture> -->
           <picture>
             <source
               srcset="./assets/images/common/pc-MV1Left.png"
@@ -357,6 +364,13 @@
           </picture>
         </div>
         <div class="Loading__Img Loading__Img--Right">
+          <!-- <picture>
+            <source
+              srcset="./assets/images/common/pc-MV1.jpg"
+              media="(min-width: 768px)"
+            />
+            <img src="./assets/images/common/sp-MV1.jpg" alt="亀の画像" />
+          </picture> -->
           <picture>
             <source
               srcset="./assets/images/common/pc-MV1Right.png"
@@ -430,10 +444,10 @@
         <div class="Campaign__inner inner">
           <div class="Campaign__Title">
             <div class="SectionTitle">
-              <h2 class="SectionTitle__English">
+              <p class="SectionTitle__English">
                 <span class="SectionTitle__uppercase">c</span>ampaign
-              </h2>
-              <p class="SectionTitle__Japanese">キャンペーン</p>
+              </p>
+              <h2 class="SectionTitle__Japanese">キャンペーン</h2>
             </div>
           </div>
           <!-- 前後の矢印 -->
@@ -441,7 +455,9 @@
             <div class="swiper-button-prev Campaign__swiper-button-prev"></div>
             <div class="swiper-button-next Campaign__swiper-button-next"></div>
           </div>
-          <div class="swiper swiper--Campaign Campaign__Contents js-swiper--Campaign">
+          <div
+            class="swiper swiper--Campaign Campaign__Contents js-swiper--Campaign"
+          >
             <div class="swiper-wrapper Campaign__List">
               <div class="swiper-slide Campaign__Item">
                 <div class="Campaign__Card CampaignCard">
@@ -651,28 +667,46 @@
         </div>
       </section>
       <section class="AboutUs l-AboutUs">
+        <div class="AboutUs__CoralImg">
+          <img
+            src="./assets/images/common/pc-coral.png"
+            alt="サンゴの画像"
+          />
+        </div>
         <div class="AboutUs__inner inner">
           <div class="AboutUs__Title">
             <div class="SectionTitle">
-              <h2 class="SectionTitle__English">
+              <p class="SectionTitle__English">
                 <span class="SectionTitle__uppercase">a</span>bout us
-              </h2>
-              <p class="SectionTitle__Japanese">私たちについて</p>
+              </p>
+              <h2 class="SectionTitle__Japanese">私たちについて</h2>
             </div>
           </div>
           <div class="AboutUs__Contents">
             <div class="AboutUs__ImgWrapper">
               <div class="AboutUs__ImgLeft">
-                <img
-                  src="./assets/images/common/sp-AboutUs1.jpg"
-                  alt="シーサーの画像"
-                />
+                <picture>
+                  <source
+                    srcset="./assets/images/common/pc-AboutUs1.jpg"
+                    media="(min-width: 768px)"
+                  />
+                  <img
+                    src="./assets/images/common/sp-AboutUs1.jpg"
+                    alt="シーサーの画像"
+                  />
+                </picture>
               </div>
               <div class="AboutUs__ImgRight">
-                <img
-                  src="./assets/images/common/sp-AboutUs2.jpg"
-                  alt="魚の画像"
-                />
+                <picture>
+                  <source
+                    srcset="./assets/images/common/pc-AboutUs2.jpg"
+                    media="(min-width: 768px)"
+                  />
+                  <img
+                    src="./assets/images/common/sp-AboutUs2.jpg"
+                    alt="魚の画像"
+                  />
+                </picture>
               </div>
             </div>
             <div class="AboutUs__ContentWrapper">
@@ -702,12 +736,6 @@
                 </div>
               </div>
             </div>
-            <div class="AboutUs__CoralImg">
-              <img
-                src="./assets/images/common/pc-coral.png"
-                alt="サンゴの画像"
-              />
-            </div>
           </div>
         </div>
       </section>
@@ -715,18 +743,24 @@
         <div class="Information__inner inner">
           <div class="Information__Title">
             <div class="SectionTitle">
-              <h2 class="SectionTitle__English">
+              <p class="SectionTitle__English">
                 <span class="SectionTitle__uppercase">i</span>nformation
-              </h2>
-              <p class="SectionTitle__Japanese">ダイビング情報</p>
+              </p>
+              <h2 class="SectionTitle__Japanese">ダイビング情報</h2>
             </div>
           </div>
           <div class="Information__Contents">
             <div class="Information__Img ScrollImgBox">
-              <img
-                src="./assets/images/common/sp-Information.jpg"
-                alt="魚の画像"
-              />
+              <picture>
+                <source
+                  srcset="./assets/images/common/pc-Information.jpg"
+                  media="(min-width: 768px)"
+                />
+                <img
+                  src="./assets/images/common/sp-Information.jpg"
+                  alt="魚の画像"
+                />
+              </picture>
             </div>
             <div class="Information__ContentWrapper">
               <h3 class="Information__ContentsTitle">ライセンス講習</h3>
@@ -771,15 +805,15 @@
         <div class="Blog__inner inner">
           <div class="Blog__Title">
             <div class="SectionTitle">
-              <h2 class="SectionTitle__English SectionTitle__English--white">
+              <p class="SectionTitle__English SectionTitle__English--white">
                 <span
                   class="SectionTitle__uppercase SectionTitle__uppercase--white"
                   >b</span
                 >log
-              </h2>
-              <p class="SectionTitle__Japanese SectionTitle__Japanese--white">
-                ブログ
               </p>
+              <h2 class="SectionTitle__Japanese SectionTitle__Japanese--white">
+                ブログ
+              </h2>
             </div>
           </div>
           <div class="Blog__Contents">
@@ -874,10 +908,10 @@
           </div>
           <div class="Voice__Title">
             <div class="SectionTitle">
-              <h2 class="SectionTitle__English">
+              <p class="SectionTitle__English">
                 <span class="SectionTitle__uppercase">v</span>oice
-              </h2>
-              <p class="SectionTitle__Japanese">お客様の声</p>
+              </p>
+              <h2 class="SectionTitle__Japanese">お客様の声</h2>
             </div>
           </div>
           <div class="Voice__Contents">
@@ -960,10 +994,10 @@
         <div class="Price__inner inner">
           <div class="Price__Title">
             <div class="SectionTitle">
-              <h2 class="SectionTitle__English">
+              <p class="SectionTitle__English">
                 <span class="SectionTitle__uppercase">p</span>rice
-              </h2>
-              <p class="SectionTitle__Japanese">料金一覧</p>
+              </p>
+              <h2 class="SectionTitle__Japanese">料金一覧</h2>
             </div>
           </div>
           <div class="Price__Contents">
@@ -1127,10 +1161,10 @@
               </div>
             </div>
             <div class="Contact__Right">
-              <h2 class="Contact__TitleEnglish">
+              <p class="Contact__TitleEnglish">
                 <span class="Contact__uppercase">c</span>ontact
-              </h2>
-              <p class="Contact__TitleJapanese">お問合せ</p>
+              </p>
+              <h2 class="Contact__TitleJapanese">お問合せ</h2>
               <p class="Contact__Description">ご予約・お問い合わせはコチラ</p>
               <div class="Contact__Button">
                 <a href="#" class="ViewMore ViewMore--shadow">
