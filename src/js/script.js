@@ -104,7 +104,7 @@ jQuery(function ($) {
     breakpoints: {
       // 768px未満の場合（デフォルトの設定）
       0: {
-        slidesPerView: 1.21, // 一度に表示する枚数
+        slidesPerView: 1.26, // 一度に表示する枚数
         spaceBetween: 24, // スライド間の距離
       },
       // 768px以上の場合
@@ -166,7 +166,7 @@ jQuery(function ($) {
    * 　ヘッダー下に移動したらヘッダーの色変える
    * -------------------------------------------- */
   $(document).ready(function () {
-    var headerHeight = $(".js-HeaderHeader").outerHeight(); // ヘッダーの高さを取得
+    var headerHeight = $(".js-Header").outerHeight(); // ヘッダーの高さを取得
     // var mainViewBottom = $("header").offset().top + $(".Campaign__inner").outerHeight();
     var mainViewBottom = $("header").offset().top + window.innerHeight;
     $(window).on("scroll", function () {

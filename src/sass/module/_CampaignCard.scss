@@ -27,18 +27,21 @@
 }
 
 .CampaignCard__TextWrapper {
-  padding: rem(16) rem(16) rem(23);
+  display: flex;
+  flex-direction: column;
+  padding: rem(16) rem(16) rem(24);
   background-color: $white;
+  // margin-top: auto;
+  height: 100%;
   @include mq("md") {
     padding: rem(24) rem(16) rem(40);
   }
 }
 
 .CampaignCard__TextTop {
-  border-bottom: 1px solid $green;
-  margin-bottom: rem(8);
+  // margin-bottom: rem(8);
   @include mq("md") {
-    margin-bottom: rem(15);
+    // margin-bottom: rem(15);
   }
 }
 
@@ -67,6 +70,12 @@
 }
 
 .CampaignCard__TextBottom {
+  border-top: 1px solid $green;
+  margin-top: auto;
+  padding-top: rem(7);
+  @include mq("md") {
+    padding-top: rem(15);
+  }
 }
 
 .CampaignCard__Text {

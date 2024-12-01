@@ -15,6 +15,7 @@
     top: 0%;
     left: 0%;
     width: 100%;
+    height: 60.5%;
     z-index: -1;
   }
 }
@@ -44,24 +45,33 @@
 
 .Blog__pcFishTopLeft {
   display: none;
+  // @include mq("md") {
+  //   display: block;
+  //   position: absolute;
+  //   top: rem(24);
+  //   left: rem(15);
+  //   width: rem(350);
+  //   z-index: -1;
+  // }
   @include mq("md") {
     display: block;
     position: absolute;
-    top: rem(24);
-    left: rem(15);
-    width: rem(350);
+    top: 3%;
+    left: 7%;
+    width: 30.3%;
+    max-width: rem(437);
     z-index: -1;
   }
-  @media (min-width: 1000px) {
-    top: rem(24);
-    left: rem(50);
-    width: rem(437);
-  }
-  @media (min-width: 1200px) {
-    top: rem(24);
-    left: rem(100);
-    width: rem(437);
-  }
+  // @media (min-width: 1000px) {
+  //   top: rem(24);
+  //   left: rem(50);
+  //   width: rem(437);
+  // }
+  // @media (min-width: 1200px) {
+  //   top: rem(24);
+  //   left: rem(100);
+  //   width: rem(437);
+  // }
 }
 
 .Blog__pcFishTopLeft::before {
@@ -89,24 +99,33 @@
 
 .Blog__pcFishBottomLeft {
   display: none;
+  // @include mq("md") {
+  //   display: block;
+  //   position: absolute;
+  //   bottom: rem(-140);
+  //   left: rem(15);
+  //   width: rem(250);
+  //   z-index: -1;
+  // }
   @include mq("md") {
     display: block;
     position: absolute;
-    bottom: rem(-140);
-    left: rem(15);
-    width: rem(250);
+    bottom: -19.6%;
+    left: 7%;
+    width: 20.9%;
+    max-width: rem(300);
     z-index: -1;
   }
-  @media (min-width: 1000px) {
-    bottom: rem(-180);
-    left: rem(50);
-    width: rem(301);
-  }
-  @media (min-width: 1200px) {
-    bottom: rem(-162);
-    left: rem(100);
-    width: rem(301);
-  }
+  // @media (min-width: 1000px) {
+  //   bottom: rem(-180);
+  //   left: rem(50);
+  //   width: rem(301);
+  // }
+  // @media (min-width: 1200px) {
+  //   bottom: rem(-162);
+  //   left: rem(100);
+  //   width: rem(301);
+  // }
 }
 
 .Blog__pcFishBottomLeft::before {

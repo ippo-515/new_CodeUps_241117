@@ -1,6 +1,67 @@
 @use "global" as *;
 
 .AboutUs {
+  position: relative;
+}
+
+.AboutUs__CoralImg {
+  display: none;
+  // @include mq("md") {
+  //   display: block;
+  //   position: absolute;
+  //   bottom: rem(0);
+  //   right: rem(7);
+  //   width: rem(194);
+  //   z-index: 30;
+  // }
+  @include mq("md") {
+    display: block;
+    position: absolute;
+    bottom: -12.9%;
+    right: 5.8%;
+    width: 13.4%;
+    max-width: rem(193);
+    z-index: 30;
+  }
+  // @media (min-width: 1000px) {
+  //   bottom: rem(-20);
+  //   right: rem(-20);
+  // }
+  // @media (min-width: 1150px) {
+  //   bottom: rem(-45);
+  //   right: rem(-40);
+  // }
+  // @media (min-width: 1200px) {
+  //   bottom: rem(-65);
+  //   right: rem(-55);
+  // }
+  // @media (min-width: 1300px) {
+  //   bottom: rem(-98);
+  //   right: rem(-97);
+  // }
+}
+
+.AboutUs__CoralImg::before {
+  display: none;
+  @include mq("md") {
+    display: block;
+    content: "";
+    padding-top: 93.29896907%; //このおかげで画像サイズ1:1を保てる！
+  }
+}
+
+.AboutUs__CoralImg img {
+  display: none;
+  @include mq("md") {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 }
 
 .AboutUs__inner {
@@ -77,11 +138,14 @@
 .AboutUs__ContentWrapper {
   @include mq("md") {
     position: absolute;
-    top: 48.7%;
-    left: 46.4%;
-    transform: translate(-50%, -50%);
+    // top: 40.3%;
+    // right: 15.4%;
+    top: 30.5%;
+    right: 3.8%;
+    // transform: translate(7.3%, -53.5%);
     display: flex;
     flex-direction: row;
+    justify-content: flex-end;
     align-items: flex-start;
     gap: rem(40);
     z-index: 3;
@@ -126,7 +190,7 @@
   letter-spacing: rem(0);
   font-weight: $regular;
   color: $dark-blue;
-  margin-bottom: rem(48);
+  margin-bottom: rem(50);
   @include mq("md") {
     color: $white;
     margin-bottom: rem(40);
@@ -134,55 +198,4 @@
 }
 
 .AboutUs__Button {
-}
-
-.AboutUs__CoralImg {
-  display: none;
-  @include mq("md") {
-    display: block;
-    position: absolute;
-    bottom: rem(0);
-    right: rem(7);
-    width: rem(194);
-    z-index: 30;
-  }
-  @media (min-width: 1000px) {
-    bottom: rem(-20);
-    right: rem(-20);
-  }
-  @media (min-width: 1150px) {
-    bottom: rem(-45);
-    right: rem(-40);
-  }
-  @media (min-width: 1200px) {
-    bottom: rem(-65);
-    right: rem(-55);
-  }
-  @media (min-width: 1300px) {
-    bottom: rem(-98);
-    right: rem(-97);
-  }
-}
-
-.AboutUs__CoralImg::before {
-  display: none;
-  @include mq("md") {
-    display: block;
-    content: "";
-    padding-top: 93.29896907%; //このおかげで画像サイズ1:1を保てる！
-  }
-}
-
-.AboutUs__CoralImg img {
-  display: none;
-  @include mq("md") {
-    display: block;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
 }
