@@ -1,10 +1,11 @@
 @use "global" as *;
 
 .SectionTitle {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  // display: flex;
+  // flex-direction: column;
+  // justify-content: center;
+  // align-items: center;
+  text-align: center;
 }
 
 .SectionTitle__English {
