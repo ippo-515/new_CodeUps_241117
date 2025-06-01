@@ -2,9 +2,9 @@
 
 .Contact {
   position: relative;
-  padding: rem(81) 0 rem(104);
+  // padding: 0 0 rem(104);
   @include mq("md") {
-    padding: rem(140) 0 rem(160);
+    // padding: 0 0 rem(160);
   }
 }
 
